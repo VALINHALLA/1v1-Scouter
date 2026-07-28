@@ -187,13 +187,15 @@ echo (isset($_POST['altusagebox'])) ? "\n#POKEMON USAGE (TAB 1)#\n" : "\n#POKEMO
 $countingfreq = array_count_values($allpokemon);
 arsort($countingfreq);
 $totalTeams = count($allteams) ?: 1;
-$tab = "\t";
 $pkmnusagecount = 0;
 
 foreach ($countingfreq as $key => $value) {
     $finalMon = urlmon((string)$key);
+    $cleanMonName = str_replace('"', '""', str_replace($suffix1, $suffix2, (string)$key));
     $percentage = substr((string)($value / $totalTeams * 100), 0, 5) . '%';
-    $outputLine = '=IMAGE("https://www.smogon.com/forums/media/minisprites/' . $finalMon . '.png")' . $tab . str_replace($suffix1, $suffix2, (string)$key) . $tab . $percentage . $tab . $value . "\n";
+    
+    // Formatted as Google Sheets Array Formula: ={IMAGE(...), "Name", "Percentage", Count}
+    $outputLine = '={IMAGE("https://www.smogon.com/forums/media/minisprites/' . $finalMon . '.png"), "' . $cleanMonName . '", "' . $percentage . '", ' . $value . '}' . "\n";
 
     if (!isset($_POST['altusagebox']) || $pkmnusagecount % 2 == 0) {
         echo $outputLine;
@@ -207,8 +209,10 @@ if (isset($_POST['altusagebox'])) {
     foreach ($countingfreq as $key => $value) {
         if ($pkmnusagecount2 % 2 != 0) {
             $finalMon = urlmon((string)$key);
+            $cleanMonName = str_replace('"', '""', str_replace($suffix1, $suffix2, (string)$key));
             $percentage = substr((string)($value / $totalTeams * 100), 0, 5) . '%';
-            echo '=IMAGE("https://www.smogon.com/forums/media/minisprites/' . $finalMon . '.png")' . $tab . str_replace($suffix1, $suffix2, (string)$key) . $tab . $percentage . $tab . $value . "\n";
+            
+            echo '={IMAGE("https://www.smogon.com/forums/media/minisprites/' . $finalMon . '.png"), "' . $cleanMonName . '", "' . $percentage . '", ' . $value . '}' . "\n";
         }
         $pkmnusagecount2++;
     }
