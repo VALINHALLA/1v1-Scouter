@@ -14,10 +14,10 @@ $sprites = twoindexes();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Skibidi Sigma 67 Scouter</title>
+<title>Big Monk Mentality's 1v1 Scouter</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
 --bg:#09090b;--panel:rgba(24,24,27,.72);--border:#2b2b33;--text:#fafafa;
@@ -44,7 +44,7 @@ width:min(900px,100%);
 background:var(--panel);
 backdrop-filter:blur(18px);
 border:1px solid rgba(255,255,255,.08);
-border-radius:14px;
+border-radius:12px;
 padding:42px;
 box-shadow:0 20px 70px rgba(0,0,0,.55);
 }
@@ -64,7 +64,7 @@ textarea,input[type=text]{
 width:100%;
 background:#111318;
 border:1px solid var(--border);
-border-radius:10px;
+border-radius:8px;
 padding:16px;
 color:white;
 font:inherit;
@@ -83,8 +83,8 @@ margin-top:28px;
 width:100%;
 padding:18px;
 border:none;
-border-radius:10px;
-background:var(--grad);
+border-radius:8px;
+background:#2563eb;
 color:white;
 font-size:1rem;
 font-weight:700;
@@ -105,10 +105,10 @@ background:#12141a;
 </head>
 <body>
 <div class="card">
-<div class="hero" style="display:flex;align-items:center;justify-content:center;gap:24px;">
-<img class="sprite" src="https://www.smogon.com/forums/media/minisprites/<?php echo $sprites[0]; ?>.png">
-<h1 style="margin:0;">Big Monk Mentality's 1v1 Scouter</h1>
-<img class="sprite" src="https://www.smogon.com/forums/media/minisprites/<?php echo $sprites[1]; ?>.png">
+<div class="hero" style="display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:32px;">
+<img class="sprite" src="https://www.smogon.com/forums/media/minisprites/<?php echo $sprites[0]; ?>.png" alt="left sprite">
+<h1 style="margin:0;font-size:2.6rem;">Big Monk Mentality's 1v1 Scouter</h1>
+<img class="sprite" src="https://www.smogon.com/forums/media/minisprites/<?php echo $sprites[1]; ?>.png" alt="right sprite">
 </div>
 
 <form action="scouter.php" method="post">
