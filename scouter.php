@@ -44,7 +44,7 @@ if (isset($_POST['fname']) && !empty($_POST['fname'])) {
         $scoutedalts[] = strtolower((string)preg_replace("/[^a-zA-Z0-9]+/", "", $value));
     }
 } else {
-    die("Error: No usernames provided.");
+    die("Error: you didnt put in any usernames dawg.");
 }
 
 $verifiedreplays = [];
@@ -66,7 +66,7 @@ if (strlen($box) > 2) {
         }
     }
 } else {
-    die("Error: You didn't provide any replays.");
+    die("Error: you didnt put any replays kid.");
 }
 
 // Suggest Sheet Size
