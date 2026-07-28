@@ -14,10 +14,10 @@ $sprites = twoindexes();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Big Monk Mentality's 1v1 Scouter</title>
+<title>Skibidi Sigma 67 Scouter</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
 --bg:#09090b;--panel:rgba(24,24,27,.72);--border:#2b2b33;--text:#fafafa;
@@ -26,7 +26,7 @@ $sprites = twoindexes();
 *{box-sizing:border-box}
 body{
 margin:0;
-font-family:Inter,system-ui,sans-serif;
+font-family:'Space Grotesk',system-ui,sans-serif;
 background:
 radial-gradient(circle at 20% 20%,rgba(96,165,250,.12),transparent 35%),
 radial-gradient(circle at 80% 10%,rgba(139,92,246,.14),transparent 35%),
@@ -44,14 +44,14 @@ width:min(900px,100%);
 background:var(--panel);
 backdrop-filter:blur(18px);
 border:1px solid rgba(255,255,255,.08);
-border-radius:28px;
+border-radius:14px;
 padding:42px;
 box-shadow:0 20px 70px rgba(0,0,0,.55);
 }
 .hero{text-align:center;margin-bottom:32px}
 .hero h1{
 font-size:3rem;margin:.4rem 0;
-background:var(--grad);
+background:#2563eb;
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
@@ -64,7 +64,7 @@ textarea,input[type=text]{
 width:100%;
 background:#111318;
 border:1px solid var(--border);
-border-radius:16px;
+border-radius:10px;
 padding:16px;
 color:white;
 font:inherit;
@@ -83,7 +83,7 @@ margin-top:28px;
 width:100%;
 padding:18px;
 border:none;
-border-radius:16px;
+border-radius:10px;
 background:var(--grad);
 color:white;
 font-size:1rem;
@@ -96,7 +96,7 @@ button:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(96,165,250,.
 display:inline-block;
 margin-top:26px;
 padding:12px 22px;
-border-radius:999px;
+border-radius:8px;
 border:1px solid rgba(255,255,255,.08);
 background:#12141a;
 }
@@ -105,10 +105,9 @@ background:#12141a;
 </head>
 <body>
 <div class="card">
-<div class="hero">
+<div class="hero" style="display:flex;align-items:center;justify-content:center;gap:24px;">
 <img class="sprite" src="https://www.smogon.com/forums/media/minisprites/<?php echo $sprites[0]; ?>.png">
-<h1>Goliad Scouter</h1>
-<p>Replay analysis for Pokémon Showdown</p>
+<h1 style="margin:0;">Big Monk Mentality's 1v1 Scouter</h1>
 <img class="sprite" src="https://www.smogon.com/forums/media/minisprites/<?php echo $sprites[1]; ?>.png">
 </div>
 
